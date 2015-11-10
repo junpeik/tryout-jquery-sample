@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang='ja'>
+<head>
+  <meta charset='UTF-8'>
+  <title>jQuery sample</title>
+  <style type="text/css">
+    body {
+      width: 700px;
+      margin: auto;
+    }
+
+    #menu ul li {
+      list-style: none;
+      float: left;
+      width: 100px;
+      text-align: center;
+    }
+
+    .menu-list p {
+      margin-left: 70px
+    }
+
+    .menu-list ul li {
+      list-style: none;
+      float: left;
+      width: 100px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div id='menu'>
+    <ul>
+      <li><a href='#'>web</a></li>
+      <li><a href='#'>news</a></li>
+      <li><a href='#'>shopping</a></li>
+      <li><a href='#'>map</a></li>
+      <button>toggle</button>
+    </ul>
+  </div>
+  <div class='menu-list'>
+    <p>約1,000,000件</p>
+  </div>
+  <div class='menu-list' style='display:none'>
+    <ul>
+      <li>language</li>
+      <li>period</li>
+      <li>result</li>
+    </ul>
+  </div>
+  <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script>
+    $(function() {
+      $('button').click(function() {
+        $('.menu-list').toggle();
+      });
+    });
+  </script>
+</body>
+</html>
